@@ -13679,7 +13679,7 @@ Name: Explained Variance, dtype: float64
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1115fceb8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x114842a90&gt;</pre>
 </div>
 
 </div>
@@ -13768,7 +13768,7 @@ Name: Explained Variance, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
@@ -13847,7 +13847,7 @@ Name: Explained Variance, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -13897,7 +13897,7 @@ Name: Explained Variance, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -14021,7 +14021,7 @@ Name: Explained Variance, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -14056,7 +14056,7 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">samples</span>
@@ -14072,7 +14072,7 @@ Sample point 2 predicted to be in Cluster 1
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14187,7 +14187,7 @@ Sample point 2 predicted to be in Cluster 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Depending on the needs of the establishment, changing the delivery service may negatively impact the customers who need the service to be available for a larger range of days. This change cannot be assumed to affect all customers equally since the demands and needs of a particular establishment may vary from customer to customer. We can determine which group of customers it affects the most by looking at how frequently each customer orders as well as amount spent from the wholesale distributor, which determines whether or not shortening the amount of days for delivery service would have a negative reaction from the customer. To implement this, a control group is made by geographically separating customers and providing them the current delivery service of 5 days a week. The experimental group will be made of customers using the new delivery service of 3 days a week. This A/B test can run for about a month or so to collect enough data and conclude if there is a significant difference in sales between the two groups. If the amount spent by each customer remains the same in both the control and experimental groups or if the experimental group purchased more, it would be better to have a delivery service of 3 days a week. Otherwise, it would be best to keep the delivery service the same and preventing the loss of sales due to having less days of delivery service.</p>
+<p>This would really depend on the type of business as changing the delivery date for one kind of business may have a negative impact as they need delivery services for a longer range of days - while other businesses may not - we cannot assume that a delivery day range change will affect all customers equally since the needs vary based by business. We could get an idea of which people would be affected by first looking at the frequency of orders - if a business places orders more frequently than 3 days a week, then we could hypothesize that changing the delivery service day range could negatively impact these businesses. In order to conduct an A/B test on this, we would need a control group that is provided with the current delivery service of 5 days a week and an experimental group with a new delivery service of 3 days a week. We can run this test for a few months to collect enough data points and see if there is a difference in sales between the two groups as we are interested in seeing if the change in delivery service affects the bottom line. If the amounts spent remain similar across both the control and experimental groups, then we can conclude that changing the delivery service day window doesn't affect customer spending and that it would be beneficial to change the delivery service to 3 days. Otherwise, if the experimental group's spend is considerably lower than the control group, then it would be better to keep the delivery service at 5 days.</p>
 
 </div>
 </div>
@@ -14227,7 +14227,7 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
@@ -14279,7 +14279,7 @@ Sample point 2 predicted to be in Cluster 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The clustering algorithm and number of clusters chosen is fairly similar to the distribution of 'HoReCa' and 'Retail' customers. In K-Means, we chose two clusters to be the best since it provided the highest silhouette score and also shows a clear difference between the type of customers. There are some overlaps of 'Retailers' in areas that are primarily 'HoReCa' and some 'HoReCa' points are mixed in with the 'Retailers' area, however, the vast majority can be seen to belong in a specific cluster. Overall, I would consider these classifications consistent with my previous definition of the customer segments since K-Means did a great job indentifying the two customer segments which are similar to the actual data labels in 'Channel'. The predictions made earlier placed the samples in the correct 'Channel' which further supports this conclusion.</p>
+<p>The clusters are similar to the distribution of "Hotel/Restaurant/Cafe" and "Retail" customers. Some overlaps exist between the two clusters but the majority belong to one of the specifi clusters - you notice that there is clear separation and given any point, you would have a general idea of which cluster that point would belong to. We chose to use 2 clusters in KMeans because it provided the highest silhouette score which would indicate that it had the clearest separation from one another. Though not perfect, I would say that these classifications are consistent with the clusters that we defined using the KMeans algorithm. The KMeans algorithm did a fairly good job in identifying the two customer segments of the actual data labels found in "Channel".</p>
 
 </div>
 </div>
